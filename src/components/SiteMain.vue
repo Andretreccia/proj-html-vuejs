@@ -1,9 +1,14 @@
 <template>
-  <main></main>
+  <main>
+    <ComponentOne />
+  </main>
 </template>
 
 <script>
-export default {};
+import ComponentOne from "./ComponentOne.vue";
+export default {
+  components: { ComponentOne },
+};
 </script>
 
 <style lang="scss">
