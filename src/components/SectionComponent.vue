@@ -2,7 +2,7 @@
   <section class="pt-5">
     <div
       class="container-fluid text-center"
-      v-for="element in ArrayOne[0]"
+      v-for="element in ArrayX[0]"
       :key="element.op"
     >
       <div class="text text-center">
@@ -13,7 +13,8 @@
           {{ element.text }}
         </p>
       </div>
-      <Cards3Component :ArrayOne="ArrayOne" />
+      <Cards3Component :ArrayX="ArrayX" v-if="element.if == '3card'" />
+      <Cards4Component :ArrayX="ArrayX" v-if="element.if == '4card'" />
       <img
         :src="require('../assets/images/' + element.img)"
         alt=""
@@ -25,12 +26,14 @@
 
 <script>
 import Cards3Component from "./Cards3Component.vue";
+import Cards4Component from "./Cards4Component.vue";
 export default {
   props: {
-    ArrayOne: Array,
+    ArrayX: Array,
   },
   components: {
     Cards3Component,
+    Cards4Component,
   },
 };
 </script>

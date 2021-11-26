@@ -57,6 +57,7 @@ export default {
       SectionOne: [
         [
           {
+            if: "3card",
             title: "Meet The New Agency SEO Template From The Avada Team",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             img: "agency-seo-desk-front-1200x570.jpg",
@@ -83,6 +84,7 @@ export default {
       SectionTwo: [
         [
           {
+            if: "4card",
             title: "See Our Top Notch Services",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             background: "pattern_background.png",
@@ -113,6 +115,24 @@ export default {
             icon: "fas fa-chart-bar",
             link: "Read More >",
           },
+        ],
+      ],
+      SectionGrid: [
+        [
+          {
+            if: "grid",
+            title: "Our Work",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            button: "VIEW OUR WORK",
+          },
+        ],
+        [
+          "case-study-gallery-1-1-600x450.jpg",
+          "case-study-gallery-2-1-600x450.jpg",
+          "case-study-gallery-3-1-600x450.jpg",
+          "case-study-gallery-4-1-600x450.jpg",
+          "case-study-gallery-5-1-600x450.jpg",
+          "case-study-gallery-6-1-600x450.jpg",
         ],
       ],
       SectionPlans: [

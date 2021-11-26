@@ -1,12 +1,12 @@
 <template>
   <main id="site-main">
-    <SectionComponent :ArrayOne="SectionOne" />
+    <SectionComponent :ArrayX="SectionOne" />
+
+    <SectionComponent :ArrayX="SectionTwo" />
   </main>
 </template>
 
 <script>
-/* import Cards3Component from "./Cards3Component.vue";
-import Cards4Component from "./Cards4Component.vue"; */
 import SectionComponent from "./SectionComponent.vue";
 export default {
   props: {
