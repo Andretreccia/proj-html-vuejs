@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SiteHeader />
+    <SiteHeader :NavLinks="NavLinks" />
 
     <SiteMain />
 
@@ -19,6 +19,147 @@ export default {
     SiteHeader,
     SiteMain,
     SiteFooter,
+  },
+  data() {
+    return {
+      /*
+         header
+         */
+      NavLinks: [
+        {
+          link: "Home",
+          apply: false,
+        },
+        {
+          link: "Who We Are",
+          apply: false,
+        },
+        {
+          link: "What We Do",
+          apply: false,
+        },
+        {
+          link: "Where We Work",
+          apply: false,
+        },
+        {
+          link: "Careers",
+          apply: true,
+        },
+        {
+          link: "News",
+          apply: false,
+        },
+      ],
+      /*
+         main 
+         */
+      SectionOne: [
+        {
+          title: "Establish Goals",
+          testo:
+            "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.",
+          icona: "fas fa-road",
+        },
+        {
+          title: "Work With a Team",
+          testo:
+            "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.",
+          icona: "fas fa-video",
+        },
+        {
+          title: "Get Results",
+          testo:
+            "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
+          icona: "fas fa-tint",
+        },
+      ],
+      SectionTwo: [
+        {
+          title: "Google SEO",
+          testo:
+            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icona: "fab fa-google",
+        },
+        {
+          title: "Brand Strategy",
+          testo:
+            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icona: "fas fa-cog",
+        },
+        {
+          title: "Local SEO",
+          testo:
+            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icona: "fas fa-building",
+        },
+        {
+          title: "SEO Analysis",
+          testo:
+            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icona: "fas fa-chart-bar",
+        },
+      ],
+      SectionPlans: [
+        {
+          title: "Standard",
+          projects: "5 GB",
+          storage: "",
+          users: "",
+          price: "19",
+        },
+        {
+          title: "Premium",
+          projects: "10 GB",
+          storage: "",
+          users: "",
+          price: "29",
+        },
+        {
+          title: "Professional",
+          projects: "15 GB",
+          storage: "",
+          users: "",
+          price: "39",
+        },
+        {
+          title: "Extreme",
+          projects: "Unlimited",
+          storage: "Unlimited",
+          users: "Unlimited",
+          price: "59",
+        },
+      ],
+      SectionNews: [
+        {
+          title: "Whi You Need A SEO Agency Now",
+          date: "November 1st, 2017",
+          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+        },
+        {
+          title: "SEO Tips For Your Startup",
+          date: "November 1st, 2017",
+          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+        },
+        {
+          title: "Image Optimization For Your Site",
+          date: "November 1st, 2017",
+          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+        },
+      ],
+      /*
+       footer
+        */
+
+      footerLink: [
+        "Home",
+        "Who We Are",
+        "Where We Work",
+        "Careers",
+        "News",
+        "Get In Touch Now",
+      ],
+    };
   },
 };
 </script>

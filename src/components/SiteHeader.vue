@@ -1,7 +1,6 @@
 <template>
   <header id="site-header">
-    <Navbar />
-
+    <Navbar :NavLinks="NavLinks" />
     <Jumbo />
   </header>
 </template>
@@ -10,6 +9,9 @@
 import Navbar from "./Navbar.vue";
 import Jumbo from "./Jumbo.vue";
 export default {
+  props: {
+    NavLinks: Array,
+  },
   components: {
     Navbar,
     Jumbo,
@@ -19,10 +21,11 @@ export default {
 
 <style lang="scss">
 #site-header {
-  height: 600px;
+  padding: 1rem;
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-image: url(../assets/images/1-hero-image.png);
 }
 </style>

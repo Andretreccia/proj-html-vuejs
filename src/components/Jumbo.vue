@@ -32,13 +32,13 @@ export default {};
       color: white;
       margin-right: 1rem;
       border-style: none;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.5rem;
     }
     .button_first {
-      background-color: $yellow-orange;
+      background-color: $contrast-color;
     }
     .button_second {
-      background-color: $science-blue;
+      background-color: $contrast-color-secondary;
     }
   }
 }
