@@ -2,7 +2,7 @@
   <div id="app">
     <SiteHeader :NavLinks="NavLinks" />
 
-    <SiteMain :SectionOne="SectionOne" />
+    <SiteMain :SectionOne="SectionOne" :SectionTwo="SectionTwo" />
 
     <SiteFooter />
   </div>
@@ -55,43 +55,65 @@ export default {
          main 
          */
       SectionOne: [
-        {
-          title: "Establish Goals",
-          text: "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.",
-          icon: "fas fa-road",
-        },
-        {
-          title: "Work With a Team",
-          text: "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.",
-          icon: "fas fa-video",
-        },
-        {
-          title: "Get Results",
-          text: "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
-          icon: "fas fa-tint",
-        },
+        [
+          {
+            title: "Meet The New Agency SEO Template From The Avada Team",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            img: "agency-seo-desk-front-1200x570.jpg",
+          },
+        ],
+        [
+          {
+            title: "Establish Goals",
+            text: "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.",
+            icon: "fas fa-road",
+          },
+          {
+            title: "Work With a Team",
+            text: "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.",
+            icon: "fas fa-video",
+          },
+          {
+            title: "Get Results",
+            text: "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
+            icon: "fas fa-tint",
+          },
+        ],
       ],
       SectionTwo: [
-        {
-          title: "Google SEO",
-          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icon: "fab fa-google",
-        },
-        {
-          title: "Brand Strategy",
-          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icon: "fas fa-cog",
-        },
-        {
-          title: "Local SEO",
-          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icon: "fas fa-building",
-        },
-        {
-          title: "SEO Analysis",
-          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icon: "fas fa-chart-bar",
-        },
+        [
+          {
+            title: "See Our Top Notch Services",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            background: "pattern_background.png",
+          },
+        ],
+        [
+          {
+            title: "Google SEO",
+            text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+            icon: "fab fa-google",
+            link: "Read More >",
+          },
+          {
+            title: "Brand Strategy",
+            text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+            icon: "fas fa-cog",
+            link: "Read More >",
+          },
+          {
+            title: "Local SEO",
+            text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+            icon: "fas fa-building",
+            link: "Read More >",
+          },
+          {
+            title: "SEO Analysis",
+            text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+            icon: "fas fa-chart-bar",
+            link: "Read More >",
+          },
+        ],
       ],
       SectionPlans: [
         {

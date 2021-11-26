@@ -1,7 +1,7 @@
 <template>
   <div class="container pt-5">
     <div class="row d-flex justify-content-center">
-      <div class="col-4" v-for="element in ArrayOne" :key="element.qua">
+      <div class="col-4" v-for="element in ArrayOne[1]" :key="element.qua">
         <div class="card text-center px-5 py-5">
           <img
             :src="require('../assets/images/' + element.img)"
