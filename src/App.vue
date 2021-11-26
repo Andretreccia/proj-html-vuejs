@@ -2,7 +2,11 @@
   <div id="app">
     <SiteHeader :NavLinks="NavLinks" />
 
-    <SiteMain :SectionOne="SectionOne" :SectionTwo="SectionTwo" />
+    <SiteMain
+      :SectionOne="SectionOne"
+      :SectionTwo="SectionTwo"
+      :SectionGrid="SectionGrid"
+    />
 
     <SiteFooter />
   </div>
@@ -88,6 +92,7 @@ export default {
             title: "See Our Top Notch Services",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             background: "pattern_background.png",
+            lay: "blue",
           },
         ],
         [
@@ -127,12 +132,12 @@ export default {
           },
         ],
         [
-          "case-study-gallery-1-1-600x450.jpg",
-          "case-study-gallery-2-1-600x450.jpg",
-          "case-study-gallery-3-1-600x450.jpg",
-          "case-study-gallery-4-1-600x450.jpg",
-          "case-study-gallery-5-1-600x450.jpg",
-          "case-study-gallery-6-1-600x450.jpg",
+          "case-study-gallery-3-1-400x300.jpg",
+          "case-study-gallery-2-400x300.jpg",
+          "case-study-gallery-1-1-400x300.jpg",
+          "case-study-gallery-4-1-400x300.jpg",
+          "case-study-gallery-5-1-400x300.jpg",
+          "case-study-gallery-6-1-400x300.jpg",
         ],
       ],
       SectionPlans: [

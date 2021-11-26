@@ -1,7 +1,10 @@
 <template>
-  <section class="pt-5">
+  <section class="">
     <div
       class="container-fluid text-center"
+      v-bind:class="{
+        bgblue: element.lay == 'blue',
+      }"
       v-for="element in ArrayX[0]"
       :key="element.op"
     >
@@ -15,6 +18,7 @@
       </div>
       <Cards3Component :ArrayX="ArrayX" v-if="element.if == '3card'" />
       <Cards4Component :ArrayX="ArrayX" v-if="element.if == '4card'" />
+      <GridComponent :ArrayX="ArrayX" v-if="element.if == 'grid'" />
       <img
         :src="require('../assets/images/' + element.img)"
         alt=""
@@ -27,6 +31,7 @@
 <script>
 import Cards3Component from "./Cards3Component.vue";
 import Cards4Component from "./Cards4Component.vue";
+import GridComponent from "./GridComponent.vue";
 export default {
   props: {
     ArrayX: Array,
@@ -34,9 +39,13 @@ export default {
   components: {
     Cards3Component,
     Cards4Component,
+    GridComponent,
   },
 };
 </script>
 
 <style lang="scss">
+.bgblue {
+  background-color: rgb(3, 3, 97);
+}
 </style>

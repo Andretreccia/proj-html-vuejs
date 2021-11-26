@@ -3,6 +3,8 @@
     <SectionComponent :ArrayX="SectionOne" />
 
     <SectionComponent :ArrayX="SectionTwo" />
+
+    <SectionComponent :ArrayX="SectionGrid" />
   </main>
 </template>
 
@@ -12,6 +14,7 @@ export default {
   props: {
     SectionOne: Array,
     SectionTwo: Array,
+    SectionGrid: Array,
   },
   components: { SectionComponent },
 };

@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 #site-header {
   padding: 1rem;
-  height: 800px;
+  height: 950px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
