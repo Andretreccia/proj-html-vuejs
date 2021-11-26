@@ -2,7 +2,7 @@
   <div id="app">
     <SiteHeader :NavLinks="NavLinks" />
 
-    <SiteMain />
+    <SiteMain :SectionOne="SectionOne" />
 
     <SiteFooter />
   </div>
@@ -57,47 +57,40 @@ export default {
       SectionOne: [
         {
           title: "Establish Goals",
-          testo:
-            "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.",
-          icona: "fas fa-road",
+          text: "Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismod odio, vel dictum mi risus a mi.",
+          icon: "fas fa-road",
         },
         {
           title: "Work With a Team",
-          testo:
-            "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.",
-          icona: "fas fa-video",
+          text: "Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.",
+          icon: "fas fa-video",
         },
         {
           title: "Get Results",
-          testo:
-            "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
-          icona: "fas fa-tint",
+          text: "Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.",
+          icon: "fas fa-tint",
         },
       ],
       SectionTwo: [
         {
           title: "Google SEO",
-          testo:
-            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icona: "fab fa-google",
+          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icon: "fab fa-google",
         },
         {
           title: "Brand Strategy",
-          testo:
-            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icona: "fas fa-cog",
+          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icon: "fas fa-cog",
         },
         {
           title: "Local SEO",
-          testo:
-            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icona: "fas fa-building",
+          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icon: "fas fa-building",
         },
         {
           title: "SEO Analysis",
-          testo:
-            "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
-          icona: "fas fa-chart-bar",
+          text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
+          icon: "fas fa-chart-bar",
         },
       ],
       SectionPlans: [
