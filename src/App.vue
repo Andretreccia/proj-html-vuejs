@@ -6,8 +6,9 @@
       :SectionOne="SectionOne"
       :SectionTwo="SectionTwo"
       :SectionGrid="SectionGrid"
+      :SectionPlans="SectionPlans"
+      :SectionNews="SectionNews"
     />
-
     <SiteFooter />
   </div>
 </template>
@@ -62,6 +63,7 @@ export default {
         [
           {
             if: "3card",
+            theme: "section-one",
             title: "Meet The New Agency SEO Template From The Avada Team",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             img: "agency-seo-desk-front-1200x570.jpg",
@@ -92,7 +94,7 @@ export default {
             title: "See Our Top Notch Services",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             background: "pattern_background.png",
-            lay: "blue",
+            theme: "section-two",
           },
         ],
         [
@@ -141,51 +143,83 @@ export default {
         ],
       ],
       SectionPlans: [
-        {
-          title: "Standard",
-          projects: "5 GB",
-          storage: "",
-          users: "",
-          price: "19",
-        },
-        {
-          title: "Premium",
-          projects: "10 GB",
-          storage: "",
-          users: "",
-          price: "29",
-        },
-        {
-          title: "Professional",
-          projects: "15 GB",
-          storage: "",
-          users: "",
-          price: "39",
-        },
-        {
-          title: "Extreme",
-          projects: "Unlimited",
-          storage: "Unlimited",
-          users: "Unlimited",
-          price: "59",
-        },
+        [
+          {
+            if: "plans",
+            title: "Our Plans",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            theme: "section-plans",
+          },
+        ],
+        [
+          {
+            title: "Standard",
+            feature1: "5",
+            feature2: "5 GB",
+            feature3: "Unlimited",
+            price: "19",
+            button: "START TODAY",
+            product: true,
+          },
+          {
+            title: "Premium",
+            feature1: "10",
+            feature2: "15 GB",
+            feature3: "Unlimited",
+            price: "29",
+            button: "START TODAY",
+            product: true,
+          },
+          {
+            title: "Professional",
+            feature1: "15",
+            feature2: "30 GB",
+            feature3: "Unlimited",
+            price: "39",
+            button: "START TODAY",
+            product: true,
+          },
+          {
+            title: "Extreme",
+            feature1: "Unlimited",
+            feature2: "Unlimited",
+            feature3: "Unlimited",
+            price: "59",
+            button: "START TODAY",
+            product: true,
+          },
+        ],
       ],
       SectionNews: [
-        {
-          title: "Whi You Need A SEO Agency Now",
-          date: "November 1st, 2017",
-          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
-        },
-        {
-          title: "SEO Tips For Your Startup",
-          date: "November 1st, 2017",
-          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
-        },
-        {
-          title: "Image Optimization For Your Site",
-          date: "November 1st, 2017",
-          text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
-        },
+        [
+          {
+            if: "news",
+            title: "Our News",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            theme: "section-news",
+            button: "GO TO NEWS",
+          },
+        ],
+        [
+          {
+            img: "related-service-2-320x202.jpg",
+            title: "Whi You Need A SEO Agency Now",
+            date: "November 1st, 2017",
+            text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+          },
+          {
+            img: "related-service-4-320x202.jpg",
+            title: "SEO Tips For Your Startup",
+            date: "November 1st, 2017",
+            text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+          },
+          {
+            img: "blog-post-6-320x202.jpg",
+            title: "Image Optimization For Your Site",
+            date: "November 1st, 2017",
+            text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
+          },
+        ],
       ],
       /*
        footer
@@ -206,4 +240,24 @@ export default {
 
 <style lang="scss">
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./assets/scss/color.scss";
+button {
+  font-size: 15px;
+  color: white;
+  margin-right: 1rem;
+  border-style: none;
+  padding: 0.5rem 1.5rem;
+  background: none;
+  font-weight: 500;
+}
+.button_first {
+  background-color: $contrast-color;
+}
+.button_second {
+  background-color: $contrast-color-secondary;
+}
+.button_third {
+  border: 2px solid black;
+  color: black;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container py-4 mb-3">
     <div class="row">
       <div class="col-4 p-2" v-for="element in ArrayX[1]" :key="element">
         <img

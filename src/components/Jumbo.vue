@@ -26,7 +26,7 @@ export default {};
 @import "../assets/scss/color.scss";
 .container {
   height: calc(100% - 100px);
-  .jumbo_buttons {
+  /*  .jumbo_buttons {
     button {
       font-size: 15px;
       color: white;
@@ -40,6 +40,6 @@ export default {};
     .button_second {
       background-color: $contrast-color-secondary;
     }
-  }
+  } */
 }
 </style>
