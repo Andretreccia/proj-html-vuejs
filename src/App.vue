@@ -8,6 +8,7 @@
       :SectionGrid="SectionGrid"
       :SectionPlans="SectionPlans"
       :SectionNews="SectionNews"
+      :SectionClient="SectionClient"
     />
     <SiteFooter />
   </div>
@@ -131,6 +132,7 @@ export default {
             title: "Our Work",
             text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
             button: "VIEW OUR WORK",
+            theme: "section-grid",
           },
         ],
         [
@@ -219,6 +221,29 @@ export default {
             date: "November 1st, 2017",
             text: "ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit",
           },
+        ],
+      ],
+      SectionClient: [
+        [
+          {
+            if: "client",
+            title: "What Our Client Say",
+            theme: "section-client",
+          },
+        ],
+        [
+          {
+            text: "Ability proceeds from a fusion of skills, knowledge, unferstanding and imagination, consolidated by experience.",
+            author: "Luis Desalvo",
+            img: "testimonials-2.jpg",
+            role: "CREO TECH",
+          },
+        ],
+        [
+          "clients_partner_1-200x202.png",
+          "clients_partner_2-200x202.png",
+          "clients_partner_3-200x202.png",
+          "clients_partner_4-200x202.png",
         ],
       ],
       /*

@@ -21,6 +21,7 @@
           <a class="" href="" v-if="element.link">{{ element.link }}</a>
 
           <!-- se l'elemento è un prodotto -->
+
           <div v-if="element.product" class="mt-2 mb-2 product">
             <div
               style="height: 40px"
@@ -50,6 +51,9 @@
             <button class="rounded-pill button_third" v-if="element.button">
               {{ element.button }}
             </button>
+          </div>
+          <div v-if="element.author">
+            <span>{{ element.author }}, </span> <span>{{ element.role }}</span>
           </div>
         </div>
       </div>

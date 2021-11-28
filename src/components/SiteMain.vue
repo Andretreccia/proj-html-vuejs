@@ -9,6 +9,8 @@
     <SectionComponent :ArrayX="SectionPlans" />
 
     <SectionComponent :ArrayX="SectionNews" />
+
+    <SectionComponent :ArrayX="SectionClient" />
   </main>
 </template>
 
@@ -21,6 +23,7 @@ export default {
     SectionGrid: Array,
     SectionPlans: Array,
     SectionNews: Array,
+    SectionClient: Array,
   },
   components: { SectionComponent },
 };

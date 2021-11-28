@@ -6,6 +6,8 @@
         sectionTwo: element.theme == 'section-two',
         sectionPlans: element.theme == 'section-plans',
         sectionNews: element.theme == 'section-news',
+        sectionClient: element.theme == 'section-client',
+        sectionGrid: element.theme == 'section-grid',
       }"
       v-for="element in ArrayX[0]"
       :key="element.op"
@@ -23,6 +25,10 @@
       <GridComponent :ArrayX="ArrayX" v-if="element.if == 'grid'" />
       <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'plans'" />
       <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'news'" />
+      <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'client'" />
+      <hr :ArrayX="ArrayX" v-if="element.if == 'client'" />
+      <GridComponent :ArrayX="ArrayX" v-if="element.if == 'client'" />
+
       <img
         :src="require('../assets/images/' + element.img)"
         alt=""
@@ -66,9 +72,15 @@ export default {
     background-color: $background-section-two-element;
   }
 }
-
-/* sezione dei piani  */
-
+.sectionGrid {
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    .col {
+      width: 500px;
+    }
+  }
+}
 .sectionPlans {
   background: url(../assets/images/background1.jpg);
   background-size: cover;
@@ -99,6 +111,20 @@ export default {
 .sectionNews {
   .card {
     background: none;
+  }
+}
+.sectionClient {
+  background: white;
+  .card {
+    img {
+      width: 250px;
+      border-radius: 100%;
+      margin: auto;
+    }
+    p {
+      font-style: italic;
+      font-size: 24px;
+    }
   }
 }
 </style>
