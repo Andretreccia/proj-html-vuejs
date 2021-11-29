@@ -64,7 +64,16 @@ export default {
 /* Prima sezione */
 .sectionOne {
   .card {
+    transition: 0.3s;
     padding: 0 2rem;
+    bottom: 0;
+    &:hover {
+      bottom: 10px;
+      h5 {
+        color: $contrast-color;
+        transition: 0.3s;
+      }
+    }
   }
 }
 .sectionTwo {
@@ -74,9 +83,14 @@ export default {
   color: white;
   height: 1000px;
   .card {
+    bottom: 0;
     background-color: $background-section-two-element;
     padding: 0 3rem;
     height: 400px;
+    transition: 0.3s;
+    &:hover {
+      bottom: 10px;
+    }
     a {
       color: $contrast-color !important;
       font-size: 1.2rem;
@@ -132,6 +146,15 @@ export default {
     p {
       font-size: 17px;
     }
+    img {
+      transition: 0.5s;
+      transform: scale(1);
+      &:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+        border-radius: 5px;
+      }
+    }
   }
 }
 .sectionClient {
@@ -160,7 +183,14 @@ export default {
       .col {
         width: 150px;
         img {
-          height: 150px;
+          height: 120px;
+          cursor: pointer;
+          transform: scale(1);
+          transition: 0.5s;
+          &:hover {
+            transition: 0.5s;
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -171,7 +201,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 0;
+  padding: 0 !important;
   .container-fluid {
     backdrop-filter: brightness(0.5);
 

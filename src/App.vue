@@ -241,10 +241,10 @@ export default {
           },
         ],
         [
+          "clients_partner_5-200x202.png",
+          "clients_partner_6-200x202.png",
           "clients_partner_1-200x202.png",
           "clients_partner_2-200x202.png",
-          "clients_partner_3-200x202.png",
-          "clients_partner_4-200x202.png",
         ],
       ],
       SectionConsultant: [
@@ -310,7 +310,7 @@ export default {
     margin-right: 1rem;
     margin-bottom: 3rem;
     border-style: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 2rem;
     background: none;
     font-weight: 500;
     &:hover {

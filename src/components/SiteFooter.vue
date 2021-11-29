@@ -31,7 +31,7 @@
             v-for="element in FooterSection[2]"
             :key="element.icon"
             :class="element"
-            class="m-2 fs-5"
+            class="m-2 fs-4"
           >
           </i>
         </div>
@@ -61,6 +61,9 @@ export default {
   .reference span {
     color: black;
     font-weight: 600;
+  }
+  i {
+    cursor: pointer;
   }
 }
 </style>

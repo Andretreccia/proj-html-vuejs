@@ -6,7 +6,7 @@
         <img src="../assets/images/logo_seo_w_1x.png" alt="" />
       </div>
       <!-- links nav -->
-      <div class="links d-flex justify-content-between">
+      <div class="links d-flex justify-content-between align-items-center">
         <a
           href=""
           class="nav-links"
@@ -15,6 +15,8 @@
           >{{ NavLink.link }}
           <span class="apply" v-if="NavLink.apply == true">APPLY</span></a
         >
+      </div>
+      <div class="d-flex align-items-center">
         <button class="button_first px-4 py-2 rounded-pill text-white fw-bold">
           GET IN TOUCH NOW
         </button>
@@ -51,6 +53,9 @@ export default {
       border: 1px solid $contrast-color;
       color: $contrast-color;
     }
+  }
+  button {
+    margin: 0 !important;
   }
 }
 </style>

@@ -82,6 +82,7 @@ export default {
 .row {
   .card {
     border: none;
+
     i {
       color: $contrast-color;
     }
