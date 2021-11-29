@@ -1,12 +1,12 @@
 <template>
-  <div class="container py-4 mb-3">
+  <div class="container py-4 mb-3 grid">
     <div class="row">
       <div
         class="col py-3"
         v-for="element in ArrayX[ArrayX.length - 1]"
         :key="element"
       >
-        <img class="" :src="require('../assets/images/' + element)" alt="" />
+        <img :src="require('../assets/images/' + element)" alt="" />
       </div>
     </div>
   </div>

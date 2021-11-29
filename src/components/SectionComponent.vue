@@ -1,57 +1,58 @@
 <template>
-  <section class="pt-4">
+  <section class="">
     <div
-      class="container-fluid text-center py-5"
+      class="container-fluid text-center"
       v-bind:class="{
+        sectionOne: element.theme == 'section-one',
         sectionTwo: element.theme == 'section-two',
         sectionPlans: element.theme == 'section-plans',
         sectionNews: element.theme == 'section-news',
         sectionClient: element.theme == 'section-client',
         sectionGrid: element.theme == 'section-grid',
+        sectionConsultant: element.theme == 'section-consultant',
       }"
       v-for="element in ArrayX[0]"
-      :key="element.op"
+      :key="element.sec"
     >
-      <div class="text text-center">
-        <h2 class="pt-5 mb-4 fw-bold" v-if="element.title">
-          {{ element.title }}
-        </h2>
-        <p v-if="element.text">
-          {{ element.text }}
-        </p>
+      <div class="container-fluid py-5">
+        <div class="text text-center">
+          <h2 class="pt-4 mb-4 fw-bold" v-if="element.title">
+            {{ element.title }}
+          </h2>
+          <p class="fs-5" v-if="element.text">
+            {{ element.text }}
+          </p>
+        </div>
+        <CardsComponent :ArrayX="ArrayX" v-if="element.if == '3card'" />
+        <CardsComponent :ArrayX="ArrayX" v-if="element.if == '4card'" />
+        <GridComponent :ArrayX="ArrayX" v-if="element.if == 'grid'" />
+        <CardsComponent :ArrayX="ArrayX" v-if="element.if == 'plans'" />
+        <CardsComponent :ArrayX="ArrayX" v-if="element.if == 'news'" />
+        <CardsComponent :ArrayX="ArrayX" v-if="element.if == 'client'" />
+        <hr class="m-auto" :ArrayX="ArrayX" v-if="element.if == 'client'" />
+        <GridComponent :ArrayX="ArrayX" v-if="element.if == 'client'" />
+        <button class="rounded-pill button_first" v-if="element.button">
+          {{ element.button }}
+        </button>
       </div>
-      <Cards4Component :ArrayX="ArrayX" v-if="element.if == '3card'" />
-      <Cards4Component :ArrayX="ArrayX" v-if="element.if == '4card'" />
-      <GridComponent :ArrayX="ArrayX" v-if="element.if == 'grid'" />
-      <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'plans'" />
-      <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'news'" />
-      <Cards4Component :ArrayX="ArrayX" v-if="element.if == 'client'" />
-      <hr :ArrayX="ArrayX" v-if="element.if == 'client'" />
-      <GridComponent :ArrayX="ArrayX" v-if="element.if == 'client'" />
-
       <img
         :src="require('../assets/images/' + element.img)"
         alt=""
         v-if="element.img"
       />
-      <button class="rounded-pill button_first" v-if="element.button">
-        {{ element.button }}
-      </button>
     </div>
   </section>
 </template>
 
 <script>
-//import Cards3Component from "./Cards3Component.vue";
-import Cards4Component from "./Cards4Component.vue";
+import CardsComponent from "./CardsComponent.vue";
 import GridComponent from "./GridComponent.vue";
 export default {
   props: {
     ArrayX: Array,
   },
   components: {
-    //Cards3Component,
-    Cards4Component,
+    CardsComponent,
     GridComponent,
   },
 };
@@ -61,7 +62,11 @@ export default {
 @import "../assets/scss/color.scss";
 
 /* Prima sezione */
-
+.sectionOne {
+  .card {
+    padding: 0 2rem;
+  }
+}
 .sectionTwo {
   background-color: $background-section-two;
   background-image: url(../assets/images/pattern_background.png);
@@ -70,15 +75,18 @@ export default {
   height: 1000px;
   .card {
     background-color: $background-section-two-element;
+    padding: 0 3rem;
+    height: 400px;
+    a {
+      color: $contrast-color !important;
+      font-size: 1.2rem;
+    }
   }
 }
 .sectionGrid {
   .row {
     flex-wrap: wrap;
     justify-content: center;
-    .col {
-      width: 500px;
-    }
   }
 }
 .sectionPlans {
@@ -93,6 +101,9 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      .price {
+        font-weight: 600;
+      }
 
       i {
         color: $text-general;
@@ -104,6 +115,7 @@ export default {
       }
       .price {
         color: $contrast-color-secondary;
+        font-weight: 900;
       }
     }
   }
@@ -111,20 +123,66 @@ export default {
 .sectionNews {
   .card {
     background: none;
+    h5 {
+      color: $contrast-color;
+    }
+    span {
+      font-size: 14px;
+    }
+    p {
+      font-size: 17px;
+    }
   }
 }
 .sectionClient {
   background: white;
   .card {
+    width: 800px;
+    margin: auto;
     img {
-      width: 250px;
+      width: 150px;
       border-radius: 100%;
       margin: auto;
     }
     p {
       font-style: italic;
-      font-size: 24px;
+      font-size: 21px;
+    }
+    .author {
+      font-weight: bold;
     }
   }
+  .grid {
+    padding: 0;
+    .row {
+      margin: -1rem;
+      padding-top: 3rem;
+      .col {
+        width: 150px;
+        img {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+.sectionConsultant {
+  background: url(../assets/images/CTA-seo-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  .container-fluid {
+    backdrop-filter: brightness(0.5);
+
+    .text {
+      color: white;
+      position: relative;
+    }
+  }
+}
+hr {
+  width: 90%;
+  margin: auto;
 }
 </style>

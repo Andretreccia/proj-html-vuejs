@@ -9,8 +9,9 @@
       :SectionPlans="SectionPlans"
       :SectionNews="SectionNews"
       :SectionClient="SectionClient"
+      :SectionConsultant="SectionConsultant"
     />
-    <SiteFooter />
+    <SiteFooter :FooterSection="FooterSection" />
   </div>
 </template>
 
@@ -58,8 +59,8 @@ export default {
         },
       ],
       /*
-         main 
-         */
+     main 
+     */
       SectionOne: [
         [
           {
@@ -103,25 +104,25 @@ export default {
             title: "Google SEO",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
             icon: "fab fa-google",
-            link: "Read More >",
+            link: "Read More ",
           },
           {
             title: "Brand Strategy",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
             icon: "fas fa-cog",
-            link: "Read More >",
+            link: "Read More ",
           },
           {
             title: "Local SEO",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
             icon: "fas fa-building",
-            link: "Read More >",
+            link: "Read More ",
           },
           {
             title: "SEO Analysis",
             text: "Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.",
             icon: "fas fa-chart-bar",
-            link: "Read More >",
+            link: "Read More ",
           },
         ],
       ],
@@ -246,17 +247,50 @@ export default {
           "clients_partner_4-200x202.png",
         ],
       ],
+      SectionConsultant: [
+        [
+          {
+            if: "consultant",
+            theme: "section-consultant",
+            title: "Start Your Free Consultation",
+            text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            button: "CONTACT US NOW",
+          },
+        ],
+      ],
       /*
        footer
         */
 
-      footerLink: [
-        "Home",
-        "Who We Are",
-        "Where We Work",
-        "Careers",
-        "News",
-        "Get In Touch Now",
+      FooterSection: [
+        [
+          {
+            theme: "footer",
+            img: "logo_seo_1x.png",
+            copyright: "2012-2020",
+            themeBy: "ThemeFusion",
+            poweredBy: "WordPress",
+            facebook: "fab fa-facebook-f",
+            instagram: "fab fa-instagram",
+            twitter: "fab fa-instagram",
+            youtube: "fab fa-youtube",
+          },
+        ],
+        [
+          "Home",
+          "Who We Are",
+          "What We Do",
+          "Where We Work",
+          "Careers",
+          "News",
+          "Get in Touch Now",
+        ],
+        [
+          "fab fa-facebook-f",
+          "fab fa-instagram",
+          "fab fa-twitter",
+          "fab fa-youtube",
+        ],
       ],
     };
   },
@@ -266,23 +300,50 @@ export default {
 <style lang="scss">
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./assets/scss/color.scss";
-button {
-  font-size: 15px;
-  color: white;
-  margin-right: 1rem;
-  border-style: none;
-  padding: 0.5rem 1.5rem;
-  background: none;
-  font-weight: 500;
-}
-.button_first {
-  background-color: $contrast-color;
-}
-.button_second {
-  background-color: $contrast-color-secondary;
-}
-.button_third {
-  border: 2px solid black;
-  color: black;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+#app {
+  font-family: "Source Sans Pro", sans-serif;
+
+  button {
+    font-size: 15px;
+    color: white;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    border-style: none;
+    padding: 0.5rem 1.5rem;
+    background: none;
+    font-weight: 500;
+    &:hover {
+      transition: 0.5s;
+      filter: brightness(1.1);
+    }
+  }
+  .button_first {
+    background-color: $contrast-color;
+  }
+  .button_second {
+    background-color: $contrast-color-secondary;
+  }
+  .button_third {
+    border: 2px solid black;
+    color: black;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 0;
+    &:hover {
+      border: 2px solid $contrast-color;
+      transition: 0.5s;
+      color: white;
+      background: $contrast-color;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      transition: 0.5s;
+      color: $contrast-color;
+    }
+  }
 }
 </style>

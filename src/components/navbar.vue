@@ -7,11 +7,15 @@
       </div>
       <!-- links nav -->
       <div class="links d-flex justify-content-between">
-        <a href="" class="nav-link" v-for="NavLink in NavLinks" :key="NavLink.i"
+        <a
+          href=""
+          class="nav-links"
+          v-for="NavLink in NavLinks"
+          :key="NavLink.i"
           >{{ NavLink.link }}
           <span class="apply" v-if="NavLink.apply == true">APPLY</span></a
         >
-        <button class="nav_button px-4 py-2 rounded-pill text-white fw-bold">
+        <button class="button_first px-4 py-2 rounded-pill text-white fw-bold">
           GET IN TOUCH NOW
         </button>
       </div>
@@ -34,28 +38,18 @@ export default {
   .logo {
     cursor: pointer;
   }
-  .links {
-    a {
-      color: white;
-      &:hover {
-        transition: 0.5s;
-        color: $contrast-color;
-      }
-    }
+  .nav-links {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
     .apply {
       font-size: 0.8rem;
       border-radius: 5px;
       padding: 0.2rem 0.5rem;
       border: 1px solid $contrast-color;
       color: $contrast-color;
-    }
-  }
-  .nav_button {
-    border-style: none;
-    background-color: $contrast-color;
-    &:hover {
-      transition: 0.5s;
-      filter: brightness(1.1);
     }
   }
 }
